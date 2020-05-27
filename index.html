@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sQuery">
+    <title>sQuery</title>
+</head>
+<body>
+    <div class="main" data-test="asd"></div>
+    <div class="main" data-test="qwe"></div>
+    <div class="main" data-test="www"></div>
+    <div class="main" data-test="eee"></div>
+    <div class="main" data-test="rrr"></div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="squery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            $('.main').eqs(1,3,4).each(function(){
+                console.log($(this).data("test"));
+            });
+            
+
+        });
+    </script>
+</body>
+</html>
